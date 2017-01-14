@@ -12,8 +12,14 @@ import UIKit
 
 class FirstViewController: UIViewController{
 
+    @IBOutlet var profilepicture: UIImageView!
+    @IBOutlet var emaillabel: UILabel!
+    @IBOutlet var genderlabel: UILabel!
     @IBOutlet var label: UILabel!
-    var name:String = "Hey"
+    var name:String = ""
+    var gender:String = ""
+    var email:String = ""
+    var url:String = ""
     
     override func viewDidLoad() {
         
@@ -28,7 +34,18 @@ class FirstViewController: UIViewController{
         print (name)
         let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
         self.name = appDelegate.name
+        self.gender = appDelegate.gender
+        self.email = appDelegate.email
+        self.url = appDelegate.url
         label.text = self.name
+        genderlabel.text = self.gender
+        emaillabel.text = self.email
+        let url = NSURL(string: self.url)
+        let data = NSData(contentsOf : url as! URL)
+        if(data != nil){
+            let image = UIImage(data : data as! Data)
+            self.profilepicture.image = image
+        }
         super.viewDidLoad()
     }
 

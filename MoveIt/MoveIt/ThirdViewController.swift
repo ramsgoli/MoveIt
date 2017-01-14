@@ -15,7 +15,10 @@ import FacebookCore
 
 class ThirdViewController: UIViewController, FBSDKLoginButtonDelegate  {
 
-    var name = ""
+    var name:String = ""
+    var gender:String = ""
+    var email:String = ""
+    var url:String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -70,10 +73,19 @@ class ThirdViewController: UIViewController, FBSDKLoginButtonDelegate  {
                 let json = result as! [String: AnyObject]
                 print (json["name"] as! String)
                 self.name = json["name"] as! String
-                
+                self.gender = json["gender"] as!String
+                self.email = json["email"] as!String
+                let picture = json["picture"] as! [String:AnyObject]
+                let picturedata = picture["data"] as! [String:AnyObject]
+                self.url = picturedata["url"] as! String
+               
+                print(self.url)
                 let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
 
                 appDelegate.name = self.name
+                appDelegate.gender = self.gender
+                appDelegate.email = self.email
+                appDelegate.url = self.url
             
             }
             else

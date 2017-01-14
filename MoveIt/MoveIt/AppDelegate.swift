@@ -14,7 +14,9 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var name:String = ""
-
+    var gender:String = ""
+    var email:String = ""
+    var url:String = ""
     var window: UIWindow?
 
 

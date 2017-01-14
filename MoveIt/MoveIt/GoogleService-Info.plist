@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>908664011788-btvfd9mug6ti5pf99qmv9b89larcc6vp.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.908664011788-btvfd9mug6ti5pf99qmv9b89larcc6vp</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAt89uEOGkh7y5gyD8K5kYEqguP22W2ITo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>908664011788</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>me.lawrencechen.MoveIt</string>
+	<key>PROJECT_ID</key>
+	<string>moveit-b6d5d</string>
+	<key>STORAGE_BUCKET</key>
+	<string>moveit-b6d5d.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:908664011788:ios:1394e580d8c2a74e</string>
+	<key>DATABASE_URL</key>
+	<string>https://moveit-b6d5d.firebaseio.com</string>
+</dict>
+</plist>
