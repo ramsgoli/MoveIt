@@ -13,9 +13,12 @@
 		2176BD761E29E02F00668994 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2176BD741E29E02F00668994 /* Main.storyboard */; };
 		2176BD781E29E02F00668994 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2176BD771E29E02F00668994 /* Assets.xcassets */; };
 		2176BD7B1E29E02F00668994 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2176BD791E29E02F00668994 /* LaunchScreen.storyboard */; };
+		2176BD841E2A0DED00668994 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2176BD831E2A0DED00668994 /* ThirdViewController.swift */; };
+		F01A202F23B33B67C910D068 /* Pods_MoveIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F1C02F12FE19B4D36EABFC5 /* Pods_MoveIt.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F1C02F12FE19B4D36EABFC5 /* Pods_MoveIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoveIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2176BD6B1E29E02F00668994 /* MoveIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoveIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2176BD6E1E29E02F00668994 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2176BD701E29E02F00668994 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +27,10 @@
 		2176BD771E29E02F00668994 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2176BD7A1E29E02F00668994 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2176BD7C1E29E02F00668994 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2176BD821E2A0A0100668994 /* MoveIt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MoveIt.entitlements; sourceTree = "<group>"; };
+		2176BD831E2A0DED00668994 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		6EDF23E949F1156B51C45AA4 /* Pods-MoveIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoveIt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoveIt/Pods-MoveIt.debug.xcconfig"; sourceTree = "<group>"; };
+		B399400442D2A36A2F9D83CD /* Pods-MoveIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoveIt.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoveIt/Pods-MoveIt.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +38,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F01A202F23B33B67C910D068 /* Pods_MoveIt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04265D1E360BED42D661E324 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6EDF23E949F1156B51C45AA4 /* Pods-MoveIt.debug.xcconfig */,
+				B399400442D2A36A2F9D83CD /* Pods-MoveIt.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		2176BD621E29E02F00668994 = {
 			isa = PBXGroup;
 			children = (
 				2176BD6D1E29E02F00668994 /* MoveIt */,
 				2176BD6C1E29E02F00668994 /* Products */,
+				04265D1E360BED42D661E324 /* Pods */,
+				D62D64178D3C91417F7F6585 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +75,25 @@
 		2176BD6D1E29E02F00668994 /* MoveIt */ = {
 			isa = PBXGroup;
 			children = (
+				2176BD821E2A0A0100668994 /* MoveIt.entitlements */,
 				2176BD6E1E29E02F00668994 /* AppDelegate.swift */,
 				2176BD701E29E02F00668994 /* FirstViewController.swift */,
 				2176BD721E29E02F00668994 /* SecondViewController.swift */,
 				2176BD741E29E02F00668994 /* Main.storyboard */,
+				2176BD831E2A0DED00668994 /* ThirdViewController.swift */,
 				2176BD771E29E02F00668994 /* Assets.xcassets */,
 				2176BD791E29E02F00668994 /* LaunchScreen.storyboard */,
 				2176BD7C1E29E02F00668994 /* Info.plist */,
 			);
 			path = MoveIt;
+			sourceTree = "<group>";
+		};
+		D62D64178D3C91417F7F6585 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F1C02F12FE19B4D36EABFC5 /* Pods_MoveIt.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +103,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2176BD7F1E29E02F00668994 /* Build configuration list for PBXNativeTarget "MoveIt" */;
 			buildPhases = (
+				CDD5A2D29AA27F3D4F5ADD33 /* [CP] Check Pods Manifest.lock */,
 				2176BD671E29E02F00668994 /* Sources */,
 				2176BD681E29E02F00668994 /* Frameworks */,
 				2176BD691E29E02F00668994 /* Resources */,
+				71006E713F9689EF00A6EAA0 /* [CP] Embed Pods Frameworks */,
+				9ACCBE6C84B12253A97EDC13 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -101,6 +133,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = ADG82Z698T;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -135,6 +172,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		71006E713F9689EF00A6EAA0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MoveIt/Pods-MoveIt-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9ACCBE6C84B12253A97EDC13 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MoveIt/Pods-MoveIt-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDD5A2D29AA27F3D4F5ADD33 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2176BD671E29E02F00668994 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -142,6 +227,7 @@
 			files = (
 				2176BD731E29E02F00668994 /* SecondViewController.swift in Sources */,
 				2176BD6F1E29E02F00668994 /* AppDelegate.swift in Sources */,
+				2176BD841E2A0DED00668994 /* ThirdViewController.swift in Sources */,
 				2176BD711E29E02F00668994 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,8 +349,10 @@
 		};
 		2176BD801E29E02F00668994 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EDF23E949F1156B51C45AA4 /* Pods-MoveIt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MoveIt/MoveIt.entitlements;
 				DEVELOPMENT_TEAM = ADG82Z698T;
 				INFOPLIST_FILE = MoveIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -276,8 +364,10 @@
 		};
 		2176BD811E29E02F00668994 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B399400442D2A36A2F9D83CD /* Pods-MoveIt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MoveIt/MoveIt.entitlements;
 				DEVELOPMENT_TEAM = ADG82Z698T;
 				INFOPLIST_FILE = MoveIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -306,6 +396,7 @@
 				2176BD811E29E02F00668994 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
