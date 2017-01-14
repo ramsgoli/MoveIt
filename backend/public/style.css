@@ -1,6 +1,6 @@
 h1{
 	text-align: center;
-	color: green;
+	color: blue;
 }
 .nav{
 	background-color: #33cc33;
@@ -12,7 +12,7 @@ ul{
 }
 .navbar-myclass li a{
 	color:white;
-	background-color: #33cc33;
+	background-color: #0000ff;
 		
 	font-family: "Comic Sans MS";
 }
