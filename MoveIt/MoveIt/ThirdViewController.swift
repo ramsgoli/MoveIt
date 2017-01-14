@@ -8,9 +8,17 @@
 
 import UIKit
 import FBSDKLoginKit
+import FirebaseAuth
+import FacebookCore
+
+
 
 class ThirdViewController: UIViewController, FBSDKLoginButtonDelegate  {
 
+    var name:String = ""
+    var gender:String = ""
+    var email:String = ""
+    var url:String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,27 +30,75 @@ class ThirdViewController: UIViewController, FBSDKLoginButtonDelegate  {
         loginButton.readPermissions = ["public_profile", "email", "user_friends"]
         
         loginButton.delegate = self
+        
 
     }
 
     
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        let firebaseAuth = FIRAuth.auth()
+        do{
+            try firebaseAuth?.signOut()
+        }catch let signOutError as NSError{
+            print("Error signing outL %@", signOutError)
+        }
+        
         print("Did log out of Facebook")
     }
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+        
+        
         if error != nil{
             print(error)
             return
         }
+        else if result.isCancelled{
+            
+        }
+        
+        FIRAuth.auth()?.signIn(with: credential) { (user, error) in
+            if error != nil{
+                return
+            }
+        }
+        
+        let req = FBSDKGraphRequest(graphPath: "me", parameters: ["fields":"email,name,gender,picture"], tokenString: FBSDKAccessToken.current().tokenString, version: nil, httpMethod: "GET")
+        req!.start{response, result, error in
+            if(error == nil)
+            {
+                print("result \(result)")
+                let json = result as! [String: AnyObject]
+                print (json["name"] as! String)
+                self.name = json["name"] as! String
+                self.gender = json["gender"] as!String
+                self.email = json["email"] as!String
+                let picture = json["picture"] as! [String:AnyObject]
+                let picturedata = picture["data"] as! [String:AnyObject]
+                self.url = picturedata["url"] as! String
+               
+                print(self.url)
+                let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+
+                appDelegate.name = self.name
+                appDelegate.gender = self.gender
+                appDelegate.email = self.email
+                appDelegate.url = self.url
+            
+            }
+            else
+            {
+                print("error \(error)")
+            }
+        }
+        
+
+        
         print("Successfully logged in with Facebook")
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
 
     /*

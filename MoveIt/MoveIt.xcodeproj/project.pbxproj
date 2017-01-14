@@ -14,6 +14,8 @@
 		2176BD781E29E02F00668994 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2176BD771E29E02F00668994 /* Assets.xcassets */; };
 		2176BD7B1E29E02F00668994 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2176BD791E29E02F00668994 /* LaunchScreen.storyboard */; };
 		2176BD841E2A0DED00668994 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2176BD831E2A0DED00668994 /* ThirdViewController.swift */; };
+		21D5F2FC1E2A3A72004D5104 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D5F2FB1E2A3A72004D5104 /* TabBarController.swift */; };
+		21D5F2FE1E2A4410004D5104 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21D5F2FD1E2A4410004D5104 /* GoogleService-Info.plist */; };
 		F01A202F23B33B67C910D068 /* Pods_MoveIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F1C02F12FE19B4D36EABFC5 /* Pods_MoveIt.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,8 @@
 		2176BD7C1E29E02F00668994 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2176BD821E2A0A0100668994 /* MoveIt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MoveIt.entitlements; sourceTree = "<group>"; };
 		2176BD831E2A0DED00668994 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		21D5F2FB1E2A3A72004D5104 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		21D5F2FD1E2A4410004D5104 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6EDF23E949F1156B51C45AA4 /* Pods-MoveIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoveIt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoveIt/Pods-MoveIt.debug.xcconfig"; sourceTree = "<group>"; };
 		B399400442D2A36A2F9D83CD /* Pods-MoveIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoveIt.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoveIt/Pods-MoveIt.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,9 +85,11 @@
 				2176BD721E29E02F00668994 /* SecondViewController.swift */,
 				2176BD741E29E02F00668994 /* Main.storyboard */,
 				2176BD831E2A0DED00668994 /* ThirdViewController.swift */,
+				21D5F2FB1E2A3A72004D5104 /* TabBarController.swift */,
 				2176BD771E29E02F00668994 /* Assets.xcassets */,
 				2176BD791E29E02F00668994 /* LaunchScreen.storyboard */,
 				2176BD7C1E29E02F00668994 /* Info.plist */,
+				21D5F2FD1E2A4410004D5104 /* GoogleService-Info.plist */,
 			);
 			path = MoveIt;
 			sourceTree = "<group>";
@@ -165,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2176BD7B1E29E02F00668994 /* LaunchScreen.storyboard in Resources */,
+				21D5F2FE1E2A4410004D5104 /* GoogleService-Info.plist in Resources */,
 				2176BD781E29E02F00668994 /* Assets.xcassets in Resources */,
 				2176BD761E29E02F00668994 /* Main.storyboard in Resources */,
 			);
@@ -228,6 +235,7 @@
 				2176BD731E29E02F00668994 /* SecondViewController.swift in Sources */,
 				2176BD6F1E29E02F00668994 /* AppDelegate.swift in Sources */,
 				2176BD841E2A0DED00668994 /* ThirdViewController.swift in Sources */,
+				21D5F2FC1E2A3A72004D5104 /* TabBarController.swift in Sources */,
 				2176BD711E29E02F00668994 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,6 +359,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6EDF23E949F1156B51C45AA4 /* Pods-MoveIt.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MoveIt/MoveIt.entitlements;
 				DEVELOPMENT_TEAM = ADG82Z698T;
@@ -366,6 +375,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B399400442D2A36A2F9D83CD /* Pods-MoveIt.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MoveIt/MoveIt.entitlements;
 				DEVELOPMENT_TEAM = ADG82Z698T;
