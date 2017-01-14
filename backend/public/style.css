@@ -4,6 +4,7 @@ h1{
 }
 .nav{
 	background-color: #33cc33;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0, 0,0,0.19);
 
 }
 ul{
@@ -16,7 +17,3 @@ ul{
 	font-family: "Comic Sans MS";
 }
 
-.navbar-header{
-	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0, 0,0,0.19);
-
-}
