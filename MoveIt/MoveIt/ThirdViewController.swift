@@ -96,7 +96,6 @@ class ThirdViewController: UIViewController, FBSDKLoginButtonDelegate  {
                 appDelegate.email = self.email
                 appDelegate.url = self.url
                 
-                
                 self.pushToServer(name: self.name, gender: self.gender, email: self.email, url: self.url)
             
             }
@@ -114,7 +113,7 @@ class ThirdViewController: UIViewController, FBSDKLoginButtonDelegate  {
     func pushToServer(name : String, gender : String, email : String, url: String) -> Bool {
         let userToPush = ["full_name": name, "sex": gender, "email": email, "profile_pic": url, "inactive_hours": 0] as [String : Any]
         
-        let usersRef = ref.child(byAppendingPath: "users")
+        let usersRef = ref.child(byAppendingPath: "users")  
         
         let users = [name: userToPush]
         usersRef.setValue(users)
