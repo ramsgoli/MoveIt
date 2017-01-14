@@ -4,4 +4,13 @@ h1{
 }
 .nav{
 	background-color: #33cc33;
+
+}
+ul{
+	color:white;
+}
+.navbar-myclass li a{
+	color:white;
+	background-color: #33cc33;
+	font-family: "Comic Sans MS";
 }
