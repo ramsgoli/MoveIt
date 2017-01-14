@@ -4,7 +4,7 @@ h1{
 }
 .nav{
 	background-color: #33cc33;
-	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0, 0,0,0.19);
+
 
 }
 ul{
@@ -23,4 +23,9 @@ ul{
 #contact{
 	margin-left: 100px;
 	text-align: left;
+}
+
+.idk{
+	height: 50px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
