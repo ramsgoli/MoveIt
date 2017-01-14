@@ -2,7 +2,7 @@
 <html>
     <head>
     	<!-- Latest compiled and minified CSS -->
-    <link rel= "stylesheet" href="style.css">
+      <link rel = "stylesheet" href= "style.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 		<!-- Optional theme -->
@@ -17,7 +17,7 @@
     <body class="body">
     	 <!-- Fixed navbar -->
     <div class="idk">
-    <nav class="navbar navbar-myclass navbar-fixed-top" style="background-color:#33cc33;" >
+    <nav class="navbar navbar-myclass navbar-fixed-top" style="background-color:#33cc33;">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -26,18 +26,33 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="index.html">Home</a></li>
-            <li class="active"><a href="about.html" style="color:white;">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
     </div>
-        <h1 style="color:#33cc33;"><br><br><br>About</h1>
-    </body>
+    <br>
+        <div class= "fatbit">
+    	<img src ="fatbit.jpeg">
+        <h4> Cutting edge MoveIt accessory </h4>
+        </div>
+        <h1 id= contact><br><br><br>Contact us!</h1> </div>
+        <div class = container>
+        <form action = "action_page.php" method="post">
+        	First name: <br>
+        	<input type="text" name = "firstname"><br>
+        	Last name: <br>
+        	<input type= "text" name = "lastname"><br>
+        	Email: <br>
+        	<input type="text" name ="email"><br>
+        	<input type="submit" value="Submit">
+        	</form>
+        	</div>
+        </body>
 </html>
