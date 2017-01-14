@@ -23,9 +23,17 @@ ul{
 #contact{
 	margin-left: 100px;
 	text-align: left;
+	margin-top: 10px;
 }
 
 .idk{
 	height: 50px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.fatbit{
+	width:200px;
+	height: 200px;
+	position:absolute;
+	left:600px;
+	top:100px;
 }
