@@ -1,6 +1,6 @@
 //
-//  SecondViewController.swift
-//  Move It
+//  FirstViewController.swift
+//  MoveIt
 //
 //  Created by Lawrence Chen on 1/13/17.
 //  Copyright © 2017 Lawrence Chen. All rights reserved.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class FirstViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

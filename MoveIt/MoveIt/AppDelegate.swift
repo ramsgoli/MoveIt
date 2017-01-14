@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Move It
+//  MoveIt
 //
 //  Created by Lawrence Chen on 1/13/17.
 //  Copyright © 2017 Lawrence Chen. All rights reserved.

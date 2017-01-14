@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Move It.xcscheme</key>
+		<key>MoveIt.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2176BD4A1E29DEC900668994</key>
+		<key>2176BD6A1E29E02F00668994</key>
 		<dict>
 			<key>primary</key>
 			<true/>

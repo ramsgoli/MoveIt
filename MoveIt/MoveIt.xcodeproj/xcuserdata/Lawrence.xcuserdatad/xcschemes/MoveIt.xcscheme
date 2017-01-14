@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2176BD4A1E29DEC900668994"
-               BuildableName = "Move It.app"
-               BlueprintName = "Move It"
-               ReferencedContainer = "container:Move It.xcodeproj">
+               BlueprintIdentifier = "2176BD6A1E29E02F00668994"
+               BuildableName = "MoveIt.app"
+               BlueprintName = "MoveIt"
+               ReferencedContainer = "container:MoveIt.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2176BD4A1E29DEC900668994"
-            BuildableName = "Move It.app"
-            BlueprintName = "Move It"
-            ReferencedContainer = "container:Move It.xcodeproj">
+            BlueprintIdentifier = "2176BD6A1E29E02F00668994"
+            BuildableName = "MoveIt.app"
+            BlueprintName = "MoveIt"
+            ReferencedContainer = "container:MoveIt.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2176BD4A1E29DEC900668994"
-            BuildableName = "Move It.app"
-            BlueprintName = "Move It"
-            ReferencedContainer = "container:Move It.xcodeproj">
+            BlueprintIdentifier = "2176BD6A1E29E02F00668994"
+            BuildableName = "MoveIt.app"
+            BlueprintName = "MoveIt"
+            ReferencedContainer = "container:MoveIt.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2176BD4A1E29DEC900668994"
-            BuildableName = "Move It.app"
-            BlueprintName = "Move It"
-            ReferencedContainer = "container:Move It.xcodeproj">
+            BlueprintIdentifier = "2176BD6A1E29E02F00668994"
+            BuildableName = "MoveIt.app"
+            BlueprintName = "MoveIt"
+            ReferencedContainer = "container:MoveIt.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
