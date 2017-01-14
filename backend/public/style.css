@@ -16,4 +16,11 @@ ul{
 		
 	font-family: "Comic Sans MS";
 }
-
+.container{
+	width: 500px;
+	align-items: left;
+}
+#contact{
+	margin-left: 100px;
+	text-align: left;
+}
