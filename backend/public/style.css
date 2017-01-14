@@ -1,4 +1,7 @@
 h1{
 	text-align: center;
-	text-decoration-color: green;
+	color: green;
+}
+nav{
+	background-color: white;
 }
