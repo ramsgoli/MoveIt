@@ -8,24 +8,17 @@
 
 import UIKit
 import FBSDKLoginKit
-import Firebase
-import FirebaseDatabase
-import FirebaseCore
 import FirebaseAuth
 import FacebookCore
 
 
-// Settings screen
+
 class ThirdViewController: UIViewController, FBSDKLoginButtonDelegate  {
 
     var name:String = ""
     var gender:String = ""
     var email:String = ""
     var url:String = ""
-    
-    var ref = FIRDatabase.database().reference()
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -72,8 +65,6 @@ class ThirdViewController: UIViewController, FBSDKLoginButtonDelegate  {
             }
         }
         
-        
-        // Getting FB data
         let req = FBSDKGraphRequest(graphPath: "me", parameters: ["fields":"email,name,gender,picture"], tokenString: FBSDKAccessToken.current().tokenString, version: nil, httpMethod: "GET")
         req!.start{response, result, error in
             if(error == nil)
@@ -95,8 +86,6 @@ class ThirdViewController: UIViewController, FBSDKLoginButtonDelegate  {
                 appDelegate.gender = self.gender
                 appDelegate.email = self.email
                 appDelegate.url = self.url
-                
-                self.pushToServer(name: self.name, gender: self.gender, email: self.email, url: self.url)
             
             }
             else
@@ -108,17 +97,6 @@ class ThirdViewController: UIViewController, FBSDKLoginButtonDelegate  {
 
         
         print("Successfully logged in with Facebook")
-    }
-    
-    func pushToServer(name : String, gender : String, email : String, url: String) -> Bool {
-        let userToPush = ["full_name": name, "sex": gender, "email": email, "profile_pic": url, "inactive_hours": 0] as [String : Any]
-        
-        let usersRef = ref.child(byAppendingPath: "users")  
-        
-        let users = [name: userToPush]
-        usersRef.setValue(users)
-        
-        return true
     }
     
     
