@@ -9,11 +9,27 @@
 import UIKit
 
 
+
 class FirstViewController: UIViewController{
 
+    @IBOutlet var label: UILabel!
+    var name:String = "Hey"
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
         
+        print (name)
+        let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        self.name = appDelegate.name
+        label.text = self.name
+        super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print (name)
+        let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        self.name = appDelegate.name
+        label.text = self.name
+        super.viewDidLoad()
     }
 
     
