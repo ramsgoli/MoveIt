@@ -49,6 +49,25 @@
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
+        <!--Settings-->
+        <scene sceneID="b7f-uK-Uch">
+            <objects>
+                <viewController id="mSb-hd-al5" customClass="ThirdViewController" customModule="MoveIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JTM-F6-4hs"/>
+                        <viewControllerLayoutGuide type="bottom" id="Egi-G6-Jvq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="S4l-YE-J8f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="riK-sr-745"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UwW-zB-z89" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-102" y="677"/>
+        </scene>
         <!--Leaderboards-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
@@ -107,6 +126,7 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="mSb-hd-al5" kind="relationship" relationship="viewControllers" id="sar-ez-bjr"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -117,6 +137,7 @@
     <resources>
         <image name="leaderboards" width="22" height="22"/>
         <image name="profile" width="22" height="22"/>
+        <image name="settings" width="22" height="22"/>
     </resources>
     <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>
