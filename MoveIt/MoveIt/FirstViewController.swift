@@ -33,7 +33,7 @@ class FirstViewController: UIViewController, FBSDKLoginButtonDelegate {
         let loginButton = FBSDKLoginButton()
         
         view.addSubview(loginButton)
-        loginButton.center = CGPoint(x: view.center.x, y: UIScreen.main.bounds.height - 3*loginButton.frame.height)
+        loginButton.center = CGPoint(x: view.center.x, y: UIScreen.main.bounds.height - 5*loginButton.frame.height)
         
         loginButton.readPermissions = ["public_profile", "email", "user_friends"]
         
@@ -118,6 +118,23 @@ class FirstViewController: UIViewController, FBSDKLoginButtonDelegate {
                 appDelegate.gender = self.gender
                 appDelegate.email = self.email
                 appDelegate.url = self.url
+                
+            
+                
+                self.name = appDelegate.name
+                self.gender = appDelegate.gender
+                self.email = appDelegate.email
+                self.url = appDelegate.url
+                self.label.text = self.name
+                self.genderlabel.text = self.gender
+                self.emaillabel.text = self.email
+                let url = NSURL(string: self.url)
+                let data = NSData(contentsOf : url as! URL)
+                if(data != nil){
+                    let image = UIImage(data : data as! Data)
+                    self.profilepicture.image = image
+                }
+
                 
                 if FIRAuth.auth()?.currentUser != nil {
                     let user = FIRAuth.auth()?.currentUser

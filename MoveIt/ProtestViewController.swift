@@ -117,11 +117,12 @@ class ProtestViewController: UIViewController, UITextFieldDelegate, CLLocationMa
             let ref = FIRDatabase.database().reference(withPath: "protests")
             
             
-            
+            if (userLocation != nil){
             let randomkey = randomStringWithLength(len: 10) as String
             let protest = ref.child(randomkey)
             let protestItem = ProtestItem(hostname: host.text!, protestname: protestName.text!, location: protestLocation.text!, description: protestDescription.text!, date: strDate, coordinates: userLocation!, attending: 1)
             protest.setValue(protestItem.toAnyObject())
+            }
         } else {
             // No user is signed in.
             // ...

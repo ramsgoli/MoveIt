@@ -159,7 +159,7 @@ class SecondViewController: UIViewController, MKMapViewDelegate, CLLocationManag
                                        subtitle: location as! String)
                     
                     //Check date
-                    
+                    /*
                     let currentDate = Date()
                     let calendar = NSCalendar.current
                     let hour = calendar.component(.hour, from: currentDate as Date)
@@ -173,7 +173,7 @@ class SecondViewController: UIViewController, MKMapViewDelegate, CLLocationManag
                     var s3 = String(format: "%@:%@", s1, s2)
                     var currentDateAsString = s+" at "+s3
                     var dateAsString: String = String(describing: date)
-                    
+                    */
                     // toInt returns optional that's why we used a:Int?
                     //var i = 0
                     /*while(i < dateAsString.characters.count) {
@@ -195,7 +195,7 @@ class SecondViewController: UIViewController, MKMapViewDelegate, CLLocationManag
                         }
                         i += 1
                     }*/
-                    
+                    /*
                     print(dateAsString)
                     print(currentDateAsString)  // currently prints "Optional(2017-02-01 at 13:45)" Need to get rid of the "Optional" and parentheses
                     print("\n")
@@ -205,7 +205,7 @@ class SecondViewController: UIViewController, MKMapViewDelegate, CLLocationManag
                     }
                     //print(currentDateAsString)
                     
-                    
+                    */
                     self.mapView.addAnnotation(point)
                     
 
@@ -245,17 +245,18 @@ class SecondViewController: UIViewController, MKMapViewDelegate, CLLocationManag
         let latitude = protestobject["latitude"]
         let attending = protestobject["attending"]
         let date = protestobject["date"]
-        
+        let idString = Array(self.json.keys)[indexPath.row]
     
         if(date != nil){
         
             cell.protestName.text = "\(protestname as! String): "
             cell.date.text = date as! String?
             cell.locationName.text = location as! String?
+            print (idString)
+            cell.idString = idString
+            cell.button.addTarget(self, action: #selector(SecondViewController.makeSegue), for: UIControlEvents.touchUpInside)
         }
-        
-        
-    
+
         return cell
     }
 
@@ -266,13 +267,28 @@ class SecondViewController: UIViewController, MKMapViewDelegate, CLLocationManag
     ///////////////////////////////////////////////////////////////////////
     // Austin added
     ///////////////////////////////////////////////////////////////////////
-    
+    /*
     func deleteBadIDs () {
         //var i = 0
         for i in badIDArray {
             ref.child(i).removeValue()
         }
     }
+ */
+    
+    func makeSegue() {
+        self.performSegue(withIdentifier: "moreInfo", sender: self)
+    }
+    func prepare(for segue: UIStoryboardSegue, sender: UIButton){
+        
+        if segue.identifier == "moreInfo"{
+            let controller = segue.destination as! InfoViewController
+            let button = sender as UIButton
+            let cell = button.superview?.superview as! ProtestViewCell
+            controller.idString = cell.idString
+        }
+    }
+
     
 }
 

@@ -12,6 +12,8 @@ class ProtestViewCell: UITableViewCell {
     @IBOutlet var protestName: UILabel!
     @IBOutlet var locationName: UILabel!
     @IBOutlet var date: UILabel!
+    var idString = ""
+    @IBOutlet var button: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,5 +25,6 @@ class ProtestViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    
 }
