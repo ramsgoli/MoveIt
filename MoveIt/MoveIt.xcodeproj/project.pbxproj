@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21344F391E2B343B008D4062 /* ProtestViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21344F381E2B343B008D4062 /* ProtestViewCell.swift */; };
 		2148EE701E2AD06900D0A6B8 /* ProtestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2148EE6F1E2AD06900D0A6B8 /* ProtestViewController.swift */; };
 		2148EE721E2ADA5A00D0A6B8 /* correct.png in Resources */ = {isa = PBXBuildFile; fileRef = 2148EE711E2ADA5A00D0A6B8 /* correct.png */; };
 		2176BD6F1E29E02F00668994 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2176BD6E1E29E02F00668994 /* AppDelegate.swift */; };
@@ -15,7 +16,6 @@
 		2176BD761E29E02F00668994 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2176BD741E29E02F00668994 /* Main.storyboard */; };
 		2176BD781E29E02F00668994 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2176BD771E29E02F00668994 /* Assets.xcassets */; };
 		2176BD7B1E29E02F00668994 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2176BD791E29E02F00668994 /* LaunchScreen.storyboard */; };
-		2176BD841E2A0DED00668994 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2176BD831E2A0DED00668994 /* ThirdViewController.swift */; };
 		21B55CAD1E2AFBD0002B6ED2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21B55CAC1E2AFBD0002B6ED2 /* GoogleService-Info.plist */; };
 		21D5F2FC1E2A3A72004D5104 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D5F2FB1E2A3A72004D5104 /* TabBarController.swift */; };
 		F01A202F23B33B67C910D068 /* Pods_MoveIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F1C02F12FE19B4D36EABFC5 /* Pods_MoveIt.framework */; };
@@ -23,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		0F1C02F12FE19B4D36EABFC5 /* Pods_MoveIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoveIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		21344F381E2B343B008D4062 /* ProtestViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtestViewCell.swift; sourceTree = "<group>"; };
 		2148EE6F1E2AD06900D0A6B8 /* ProtestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProtestViewController.swift; path = ../ProtestViewController.swift; sourceTree = "<group>"; };
 		2148EE711E2ADA5A00D0A6B8 /* correct.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = correct.png; path = ../../../correct.png; sourceTree = "<group>"; };
 		2176BD6B1E29E02F00668994 /* MoveIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoveIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,7 +35,6 @@
 		2176BD7A1E29E02F00668994 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2176BD7C1E29E02F00668994 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2176BD821E2A0A0100668994 /* MoveIt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MoveIt.entitlements; sourceTree = "<group>"; };
-		2176BD831E2A0DED00668994 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		21B55CAC1E2AFBD0002B6ED2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		21B55CAE1E2B10C0002B6ED2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		21D5F2FB1E2A3A72004D5104 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 				2176BD701E29E02F00668994 /* FirstViewController.swift */,
 				2176BD721E29E02F00668994 /* SecondViewController.swift */,
 				2176BD741E29E02F00668994 /* Main.storyboard */,
-				2176BD831E2A0DED00668994 /* ThirdViewController.swift */,
+				21344F381E2B343B008D4062 /* ProtestViewCell.swift */,
 				2148EE6F1E2AD06900D0A6B8 /* ProtestViewController.swift */,
 				21D5F2FB1E2A3A72004D5104 /* TabBarController.swift */,
 				2176BD771E29E02F00668994 /* Assets.xcassets */,
@@ -245,9 +245,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2148EE701E2AD06900D0A6B8 /* ProtestViewController.swift in Sources */,
+				21344F391E2B343B008D4062 /* ProtestViewCell.swift in Sources */,
 				2176BD731E29E02F00668994 /* SecondViewController.swift in Sources */,
 				2176BD6F1E29E02F00668994 /* AppDelegate.swift in Sources */,
-				2176BD841E2A0DED00668994 /* ThirdViewController.swift in Sources */,
 				21D5F2FC1E2A3A72004D5104 /* TabBarController.swift in Sources */,
 				2176BD711E29E02F00668994 /* FirstViewController.swift in Sources */,
 			);

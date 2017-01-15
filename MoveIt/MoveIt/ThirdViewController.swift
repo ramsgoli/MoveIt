@@ -30,7 +30,7 @@ class ThirdViewController: UIViewController, FBSDKLoginButtonDelegate  {
         view.addSubview(loginButton)
         loginButton.center = view.center
         
-        loginButton.readPermissions = ["public_profile", "user_posts", "user_friends"]
+        loginButton.readPermissions = ["public_profile", "email", "user_friends"]
         
         loginButton.delegate = self
         
