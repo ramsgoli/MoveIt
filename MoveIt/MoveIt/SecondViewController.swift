@@ -35,7 +35,7 @@ class SecondViewController: UIViewController, MKMapViewDelegate, CLLocationManag
     let regionRadius: CLLocationDistance = 10000
     var json: [String:AnyObject] = ["":"" as AnyObject]
     var protestArray: [NSDictionary] = [["":""]]
-    var badIDArray: [String] = [""]
+    var badIDArray: [String]!
     
     var ref: FIRDatabaseReference!
     
@@ -160,6 +160,52 @@ class SecondViewController: UIViewController, MKMapViewDelegate, CLLocationManag
                     
                     //Check date
                     
+                    let currentDate = Date()
+                    let calendar = NSCalendar.current
+                    let hour = calendar.component(.hour, from: currentDate as Date)
+                    let minutes = calendar.component(.minute, from: currentDate as Date)
+                    
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "yyyy-MM-dd"
+                    var s = dateFormatter.string(from: currentDate)
+                    var s1 = String(format: "%02d", hour)
+                    var s2 = String(format: "%02d", minutes)
+                    var s3 = String(format: "%@:%@", s1, s2)
+                    var currentDateAsString = s+" at "+s3
+                    var dateAsString: String = String(describing: date)
+                    
+                    // toInt returns optional that's why we used a:Int?
+                    //var i = 0
+                    /*while(i < dateAsString.characters.count) {
+                        if Int(dateAsString.index(i, offsetBy: 1)) < Int(currentDateAsString.index(i, offsetBy: 1)) {
+                            
+                        }
+                        i += 1
+                    }
+                    */
+                    /*var currentDateAsArray : [Character]!
+                    
+                    for currentChar in currentDateAsString.characters {
+                        currentDateAsArray.append(currentChar)
+                    }
+                    
+                    for char in dateAsString.characters {
+                        if Int(char) < Int(currentDateAsArray[i]) {
+                            
+                        }
+                        i += 1
+                    }*/
+                    
+                    print(dateAsString)
+                    print(currentDateAsString)  // currently prints "Optional(2017-02-01 at 13:45)" Need to get rid of the "Optional" and parentheses
+                    print("\n")
+                    if currentDateAsString.substring(from: currentDateAsString.startIndex) > dateAsString {
+                        self.badIDArray.append(id)
+                        print("DEBUGGING CHECK DATE FUNCTIONALITY" + id)    // this id is bad
+                    }
+                    //print(currentDateAsString)
+                    
+                    
                     self.mapView.addAnnotation(point)
                     
 
@@ -216,5 +262,17 @@ class SecondViewController: UIViewController, MKMapViewDelegate, CLLocationManag
     override func viewDidAppear(_ animated: Bool) {
         refresh()
     }
+    
+    ///////////////////////////////////////////////////////////////////////
+    // Austin added
+    ///////////////////////////////////////////////////////////////////////
+    
+    func deleteBadIDs () {
+        //var i = 0
+        for i in badIDArray {
+            ref.child(i).removeValue()
+        }
+    }
+    
 }
 
