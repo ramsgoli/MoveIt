@@ -27,6 +27,7 @@ class FirstViewController: UIViewController{
         let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
         self.name = appDelegate.name
         label.text = self.name
+        
         super.viewDidLoad()
     }
     

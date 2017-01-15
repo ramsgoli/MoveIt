@@ -13,8 +13,6 @@ pod 'FacebookLogin'
 pod 'FacebookShare'
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
-<<<<<<< HEAD
+pod 'Firebase/Database'
 
-=======
->>>>>>> parent of 58705b4... Added abiility to push to Firebase server
 end

@@ -10,6 +10,7 @@ import UIKit
 import FBSDKLoginKit
 import FirebaseAuth
 import FacebookCore
+import FirebaseDatabase
 
 
 
@@ -19,6 +20,8 @@ class ThirdViewController: UIViewController, FBSDKLoginButtonDelegate  {
     var gender:String = ""
     var email:String = ""
     var url:String = ""
+    var ref: FIRDatabaseReference!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,7 +30,7 @@ class ThirdViewController: UIViewController, FBSDKLoginButtonDelegate  {
         view.addSubview(loginButton)
         loginButton.center = view.center
         
-        loginButton.readPermissions = ["public_profile", "email", "user_friends"]
+        loginButton.readPermissions = ["public_profile", "user_posts", "user_friends"]
         
         loginButton.delegate = self
         
@@ -78,6 +81,7 @@ class ThirdViewController: UIViewController, FBSDKLoginButtonDelegate  {
                 let picture = json["picture"] as! [String:AnyObject]
                 let picturedata = picture["data"] as! [String:AnyObject]
                 self.url = picturedata["url"] as! String
+ 
                
                 print(self.url)
                 let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -86,6 +90,17 @@ class ThirdViewController: UIViewController, FBSDKLoginButtonDelegate  {
                 appDelegate.gender = self.gender
                 appDelegate.email = self.email
                 appDelegate.url = self.url
+                
+                if FIRAuth.auth()?.currentUser != nil {
+                    let user = FIRAuth.auth()?.currentUser
+                    self.ref = FIRDatabase.database().reference()
+                    self.ref.child("users").child((user?.uid)!).setValue(["name": self.name, "gender": self.gender, "email": self.email, "ProfilePicURL": self.url, "protestcount": "0"])
+                } else {
+                    // No user is signed in.
+                    // ...
+                }
+                
+                
             
             }
             else
@@ -94,13 +109,10 @@ class ThirdViewController: UIViewController, FBSDKLoginButtonDelegate  {
             }
         }
         
-
         
         print("Successfully logged in with Facebook")
     }
     
-    
-
     /*
     // MARK: - Navigation
 

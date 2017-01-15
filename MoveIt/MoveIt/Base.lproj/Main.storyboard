@@ -88,9 +88,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UwW-zB-z89" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-111" y="906"/>
+            <point key="canvasLocation" x="-111.2" y="905.3973013493254"/>
         </scene>
-        <!--Leaderboards-->
+        <!--Protests-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="MoveIt" customModuleProvider="target" sceneMemberID="viewController">
@@ -102,33 +102,129 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="83" y="313" width="209.5" height="41.5"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="80" y="362.5" width="215" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Mk1-Y7-C3V">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="380"/>
+                            </mapView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZxS-7m-pIO">
+                                <rect key="frame" x="0.0" y="380" width="375" height="238"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="238" id="Wes-3k-sp7"/>
+                                </constraints>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstAttribute="trailing" secondItem="Mk1-Y7-C3V" secondAttribute="trailing" id="8ha-dE-DBt"/>
+                            <constraint firstItem="Mk1-Y7-C3V" firstAttribute="trailing" secondItem="ZxS-7m-pIO" secondAttribute="trailing" id="Vmw-Rx-X9y"/>
+                            <constraint firstItem="Mk1-Y7-C3V" firstAttribute="leading" secondItem="ZxS-7m-pIO" secondAttribute="leading" id="aDM-Ta-kr8"/>
+                            <constraint firstItem="ZxS-7m-pIO" firstAttribute="bottom" secondItem="Djb-ko-YwX" secondAttribute="top" id="hai-4z-jCX"/>
+                            <constraint firstItem="ZxS-7m-pIO" firstAttribute="top" secondItem="Mk1-Y7-C3V" secondAttribute="bottom" id="ovq-tn-37h"/>
+                            <constraint firstItem="Mk1-Y7-C3V" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="vpe-UF-Txl"/>
+                            <constraint firstItem="Mk1-Y7-C3V" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="xgA-Vy-z1S"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Leaderboards" image="leaderboards" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Protests" image="leaderboards" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="mapView" destination="Mk1-Y7-C3V" id="Imz-UU-gTg"/>
+                        <outlet property="tableView" destination="ZxS-7m-pIO" id="oPb-Tu-yF1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
+        </scene>
+        <!--Create-->
+        <scene sceneID="DO7-1Q-1TH">
+            <objects>
+                <viewController id="fzm-ka-thA" customClass="ProtestViewController" customModule="MoveIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3ew-9x-mfN"/>
+                        <viewControllerLayoutGuide type="bottom" id="3se-sf-RGB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nbB-Ot-aKJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Host Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o0r-hC-qdt">
+                                <rect key="frame" x="101" y="73" width="173" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="fzm-ka-thA" id="Erb-ub-aAb"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of Protest" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AcQ-Mh-04H">
+                                <rect key="frame" x="91" y="140" width="193" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="fzm-ka-thA" id="xs0-IP-Yta"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Protest description..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cnp-RG-qzK">
+                                <rect key="frame" x="68" y="178" width="238" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="fzm-ka-thA" id="GrF-nT-Sb1"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Protest Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="12e-5b-emW">
+                                <rect key="frame" x="115" y="216" width="145" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="fzm-ka-thA" id="flj-ep-TQx"/>
+                                </connections>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="pcB-KF-EaK">
+                                <rect key="frame" x="0.0" y="277" width="375" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="506121899.151191">
+                                    <!--2017-01-14 21:24:59 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-56928661622">
+                                    <!--0197-01-01 10:52:58 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="dateChanged:" destination="fzm-ka-thA" eventType="valueChanged" id="roq-ZB-L7X"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrL-O8-NIJ">
+                                <rect key="frame" x="68" y="492" width="238" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                <state key="normal" title="Create Protest">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="createButton:" destination="fzm-ka-thA" eventType="touchUpInside" id="tyw-QS-T32"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Create" image="first" id="mtG-6d-bvO"/>
+                    <connections>
+                        <outlet property="datePicker" destination="pcB-KF-EaK" id="mnL-JW-wE9"/>
+                        <outlet property="host" destination="o0r-hC-qdt" id="64D-UT-9Tp"/>
+                        <outlet property="protestDescription" destination="cnp-RG-qzK" id="aco-2G-RXr"/>
+                        <outlet property="protestLocation" destination="12e-5b-emW" id="4WH-Us-G2T"/>
+                        <outlet property="protestName" destination="AcQ-Mh-04H" id="iqx-Qh-x5m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7cG-9k-Awa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-789.60000000000002" y="410.64467766116945"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -141,7 +237,7 @@
                         <color key="tintColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="value" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBar>
@@ -149,6 +245,7 @@
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="mSb-hd-al5" kind="relationship" relationship="viewControllers" id="sar-ez-bjr"/>
+                        <segue destination="fzm-ka-thA" kind="relationship" relationship="viewControllers" id="vEp-fF-G6C"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -157,9 +254,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="first" width="30" height="30"/>
         <image name="leaderboards" width="22" height="22"/>
         <image name="profile" width="22" height="22"/>
         <image name="settings" width="22" height="22"/>
     </resources>
-    <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+    <color key="tintColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
 </document>
